@@ -49,6 +49,11 @@ La biblioteca tiene 7 unidades, 4 hojas, altura 2 (en aristas) y 13 libros.
 Los detalles de los recorridos, las trazas y las eliminaciones están en
 [`TRAZAS.md`](TRAZAS.md).
 
+El informe técnico en PDF se encuentra en
+[`Informe-Deber-Arboles-VillacresFernando.pdf`](Informe-Deber-Arboles-VillacresFernando.pdf).
+Incluye resultados verificados y un borrador de reflexión; antes de entregarlo,
+completa las evidencias personales pendientes indicadas en el documento.
+
 ## Organización
 
 ```text
