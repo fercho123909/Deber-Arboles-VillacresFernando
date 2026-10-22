@@ -147,8 +147,25 @@ Preorden final: 75 35 45 40 42 80 90
 
 | Punto | Resultado calculado a mano | Comparación |
 | --- | --- | --- |
-| Estructura inicial | 7 unidades, 4 hojas, altura 2, 13 libros | Coincide con `PruebasBiblioteca` |
-| Recorridos iniciales de SW-E1 | Ver sección 3 | Coinciden con `PruebasBiblioteca` |
-| Camino a 42 y rango 40–75 | `[60, 35, 45, 40]`; 5 libros | Coincide con `PruebasBiblioteca` |
-| Eliminaciones 20, 70 y 60 tras insertar 42 | Preorden `75 35 45 40 42 80 90` | Coincide con `PruebasBiblioteca` |
+| Biblioteca con solo la raíz | Altura 0; 1 hoja | Coincide con `biblioteca con solo la raíz` |
+| Biblioteca inicial | 7 unidades, 4 hojas, altura 2, 13 libros | Coincide con `estructura inicial` |
+| Niveles | BIB = 0; sw = 1; SW-E2 = 2; XYZ = -1 | Coincide con `niveles y búsqueda sin distinguir mayúsculas` |
+| Insertar un estante directamente bajo BIB | `false` | Coincide con `reglas de inserción y códigos únicos` |
+| Recorridos iniciales de SW-E1 | Ver sección 3 | Coinciden con `recorridos del estante SW-E1` |
+| Insertar código duplicado | `false` | Coincide con `duplicado, camino y rango` |
+| Camino a 42 y rango 40–75 | `[60, 35, 45, 40]`; 5 libros | Coincide con `duplicado, camino y rango` |
+| Eliminaciones 20, 70 y 60 tras insertar 42 | Preorden `75 35 45 40 42 80 90` | Coincide con `eliminación de hoja, un hijo y dos hijos` |
+| Búsqueda/modificación/eliminación inexistentes | `null / false / false` | Coincide con `operaciones sobre libro inexistente` |
+| Crear libro inválido | `IllegalArgumentException` | Coincide con `validaciones de datos de libro` |
+| Nieto fuera de los límites del ABB | `esABBValido()` devuelve `false` | Coincide con `ABB inválido por nieto mal ubicado` |
+| Reconstruir desde preorden | Conserva el preorden inicial y es ABB válido | Coincide con `reconstrucción directa desde preorden` |
 | Tres códigos personales | Completar después de calcularlos privadamente | Pendiente de completar y comparar |
+
+La salida completa de los 12 casos se muestra en el README. Para la evidencia
+solicitada, ejecuta `PruebasBiblioteca` en tu terminal y toma una captura real
+de la salida en tu equipo.
+
+La ejecución local guardada en [`docs/resultado-pruebas.txt`](docs/resultado-pruebas.txt)
+confirma los casos generales. Todavía no sustituye las trazas, recorridos y
+diagrama del ABB personalizado: esos resultados solo pueden completarse cuando
+se agreguen los tres códigos personales calculados según la consigna.

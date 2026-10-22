@@ -1,0 +1,13 @@
+OK  biblioteca con solo la ra�z
+OK  estructura inicial
+OK  niveles y b�squeda sin distinguir may�sculas
+OK  reglas de inserci�n y c�digos �nicos
+OK  recorridos del estante SW-E1
+OK  duplicado, camino y rango
+OK  eliminaci�n de hoja, un hijo y dos hijos
+OK  modificaci�n conserva c�digo y valida cambios
+OK  operaciones sobre libro inexistente
+OK  validaciones de datos de libro
+OK  ABB inv�lido por nieto mal ubicado
+OK  reconstrucci�n directa desde preorden
+12/12 pruebas OK

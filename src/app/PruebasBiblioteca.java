@@ -20,7 +20,7 @@ public final class PruebasBiblioteca {
     public static void main(String[] args) {
         total = 0;
         exitosas = 0;
-        ejecutar("biblioteca vacía", PruebasBiblioteca::probarBibliotecaVacia);
+        ejecutar("biblioteca con solo la raíz", PruebasBiblioteca::probarBibliotecaVacia);
         ejecutar("estructura inicial", PruebasBiblioteca::probarEstructuraInicial);
         ejecutar("niveles y búsqueda sin distinguir mayúsculas",
                 PruebasBiblioteca::probarNiveles);
