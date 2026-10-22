@@ -30,6 +30,8 @@ java -cp out app.PruebasBiblioteca
 ```
 
 La salida esperada termina en `12/12 pruebas OK`.
+GitHub Actions compila el proyecto y ejecuta la misma suite en cada push a
+`main`/`desarrollo` y en pull requests hacia `main`.
 
 ## Datos iniciales
 
