@@ -29,7 +29,28 @@ Para ejecutar las pruebas:
 java -cp out app.PruebasBiblioteca
 ```
 
-La salida esperada termina en `12/12 pruebas OK`.
+La ejecución verificada de las pruebas se conserva en
+[`docs/resultado-pruebas.txt`](docs/resultado-pruebas.txt); termina en
+`13/13 pruebas OK`:
+
+```text
+OK  biblioteca con solo la raíz
+OK  estructura inicial
+OK  niveles y búsqueda sin distinguir mayúsculas
+OK  reglas de inserción y códigos únicos
+OK  recorridos del estante SW-E1
+OK  duplicado, camino y rango
+OK  eliminación de hoja, un hijo y dos hijos
+OK  modificación conserva código y valida cambios
+OK  operaciones sobre libro inexistente
+OK  validaciones de datos de libro
+OK  ABB inválido por nieto mal ubicado
+OK  reconstrucción directa desde preorden
+OK  inserción de tres códigos demostrativos
+13/13 pruebas OK
+```
+GitHub Actions compila el proyecto y ejecuta la misma suite en cada push a
+`main`/`desarrollo` y en pull requests hacia `main`.
 
 ## Datos iniciales
 
@@ -46,6 +67,14 @@ BIB Biblioteca FISEI
 La biblioteca tiene 7 unidades, 4 hojas, altura 2 (en aristas) y 13 libros.
 Los detalles de los recorridos, las trazas y las eliminaciones están en
 [`TRAZAS.md`](TRAZAS.md).
+Esa guía muestra además una ejecución reproducible con los códigos de ejemplo
+`11, 22, 33`; no son códigos personales derivados de una cédula. Sustitúyelos
+por tus resultados antes de presentar las trazas personales.
+
+El informe de la práctica se encuentra en
+[`Deber-Arboles-VillacresFernando.pdf`](Deber-Arboles-VillacresFernando.pdf).
+Incluye los resultados verificados y conclusiones; revisa las evidencias
+personales pendientes antes de entregarlo.
 
 ## Organización
 
@@ -65,15 +94,18 @@ No se usan `TreeSet`, `TreeMap`, `PriorityQueue`, `NavigableSet`,
 
 ## Preparación de la entrega
 
-- Crear el repositorio público `Deber-Arboles-ApellidoNombre`.
-- Crear y usar la rama `desarrollo`, realizar commits propios y abrir un pull
-  request hacia `main`; revisar que el resultado quede integrado en `main`.
+- El repositorio público de este proyecto es
+  [Deber-Arboles-VillacresFernando](https://github.com/fercho123909/Deber-Arboles-VillacresFernando).
+- El trabajo está publicado en la rama `desarrollo`. Para cumplir el flujo de
+  la asignatura, crea el pull request hacia `main` y confirma su integración.
 - Adjuntar en Moodle el PDF solicitado con enlace al repositorio, capturas
-  propias de la ejecución, las pruebas, commits y pull request, y la reflexión.
+  propias de la ejecución, pruebas, historial de commits y pull request, y la reflexión.
 - Completar en [`TRAZAS.md`](TRAZAS.md) los códigos derivados de los últimos
   cuatro dígitos de la cédula. No se necesita subir ni compartir ese número.
 - Ejecutar el proyecto y explicar las decisiones de implementación antes de
   entregar: la práctica es individual.
 
-El repositorio remoto, los commits, el pull request y las capturas de ejecución
-deben generarse desde la cuenta y el equipo del estudiante; no se simulan aquí.
+El archivo de resultados es la salida real redirigida desde la ejecución local.
+Toma también una captura desde tu terminal para la evidencia fotográfica
+solicitada; no reemplaces las capturas propias de historial o pull request con
+el archivo de resultados.
