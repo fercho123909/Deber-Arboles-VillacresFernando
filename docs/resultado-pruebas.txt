@@ -10,4 +10,5 @@ OK  operaciones sobre libro inexistente
 OK  validaciones de datos de libro
 OK  ABB inv�lido por nieto mal ubicado
 OK  reconstrucci�n directa desde preorden
-12/12 pruebas OK
+OK  inserci�n de tres c�digos demostrativos
+13/13 pruebas OK

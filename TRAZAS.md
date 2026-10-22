@@ -2,26 +2,94 @@
 
 ## 1. Códigos personales y árbol final
 
-Completa esta sección localmente con los cuatro últimos dígitos de tu cédula;
-no los publiques en este archivo ni los compartas en el chat.
+Los códigos de la consigna deben derivarse de los cuatro últimos dígitos de la
+cédula. Como esos valores no se compartieron, se usan `11`, `22` y `33` solo
+como **ejemplo demostrativo**: son positivos, distintos y no existen en SW-E1.
+No son códigos personales ni se presentan como derivados de una cédula.
 
-1. Separa los dígitos como `abcd` y forma `ab`, `bc` y `cd` como enteros.
-2. Si un resultado es cero, se repite o ya está en SW-E1 (20, 35, 40, 45, 60,
-   70, 75, 80 o 90), súmale 1. Repite el ajuste hasta obtener tres códigos
-   positivos, distintos entre sí y que no estén en el catálogo.
-3. Anota los tres códigos aquí y luego insértalos, en ese orden, después de la
-   secuencia inicial de SW-E1: `60, 35, 80, 20, 45, 70, 90, 40, 75`.
+Para sustituir el ejemplo por los códigos correctos, calcula `ab`, `bc` y `cd`
+de forma privada; si algún resultado es cero, se repite o ya existe en
+SW-E1 (20, 35, 40, 45, 60, 70, 75, 80 o 90), súmale 1 hasta que los tres
+valores sean positivos, distintos y no estén en el catálogo. Luego reemplaza
+`11, 22, 33` por esos resultados en la secuencia.
 
 ```text
-Códigos personales (guardar solo en la copia privada): ____, ____ y ____.
-Secuencia completa para construir el ABB: 60, 35, 80, 20, 45, 70, 90, 40, 75,
-                                          ____, ____ y ____.
+Códigos de ejemplo (no personales): 11, 22 y 33.
+Secuencia demostrativa: 60, 35, 80, 20, 45, 70, 90, 40, 75, 11, 22, 33.
 ```
 
-El diagrama, los recorridos y la traza de esta sección dependen de esos tres
-códigos. Usa el menú de la aplicación o dibuja el ABB siguiendo las inserciones
-y completa los espacios antes de preparar las capturas. El ejemplo verificable
-con los nueve códigos iniciales está abajo.
+La aplicación permite reproducir exactamente esta secuencia con
+`DatosPrueba.crearCatalogoSW_E1ConCodigos(11, 22, 33)`. Al entregar, reemplaza
+los códigos y todos los resultados demostrativos por los personales calculados.
+
+### ABB con los tres códigos demostrativos
+
+```mermaid
+graph TD
+    p60["60"]
+    p60 -->|I| p35["35"]
+    p60 -->|D| p80["80"]
+    p35 -->|I| p20["20"]
+    p35 -->|D| p45["45"]
+    p20 -->|I| p11["11"]
+    p20 -->|D| p22["22"]
+    p22 -->|D| p33["33"]
+    p45 -->|I| p40["40"]
+    p80 -->|I| p70["70"]
+    p80 -->|D| p90["90"]
+    p70 -->|D| p75["75"]
+```
+
+Los recorridos del árbol demostrativo son:
+
+```text
+Preorden: 60 35 20 11 22 33 45 40 80 70 75 90
+Inorden:  11 20 22 33 35 40 45 60 70 75 80 90
+Posorden: 11 33 22 20 40 45 35 75 70 90 80 60
+```
+
+### Traza de preorden demostrativa
+
+```text
+entra 60
+VISITA 60
+  entra 35
+  VISITA 35
+    entra 20
+    VISITA 20
+      entra 11
+      VISITA 11
+        null -> regresa
+        null -> regresa
+      entra 22
+      VISITA 22
+        null -> regresa
+        entra 33
+        VISITA 33
+          null -> regresa
+          null -> regresa
+    entra 45
+    VISITA 45
+      entra 40
+      VISITA 40
+        null -> regresa
+        null -> regresa
+      null -> regresa
+  entra 80
+  VISITA 80
+    entra 70
+    VISITA 70
+      null -> regresa
+      entra 75
+      VISITA 75
+        null -> regresa
+        null -> regresa
+    entra 90
+    VISITA 90
+      null -> regresa
+      null -> regresa
+Secuencia PREORDEN: 60 35 20 11 22 33 45 40 80 70 75 90
+```
 
 ## 2. ABB inicial de SW-E1
 
@@ -159,9 +227,9 @@ Preorden final: 75 35 45 40 42 80 90
 | Crear libro inválido | `IllegalArgumentException` | Coincide con `validaciones de datos de libro` |
 | Nieto fuera de los límites del ABB | `esABBValido()` devuelve `false` | Coincide con `ABB inválido por nieto mal ubicado` |
 | Reconstruir desde preorden | Conserva el preorden inicial y es ABB válido | Coincide con `reconstrucción directa desde preorden` |
-| Tres códigos personales | Completar después de calcularlos privadamente | Pendiente de completar y comparar |
+| Tres códigos demostrativos `11, 22, 33` | Secuencia, ABB y recorridos demostrativos en sección 1 | Coinciden con `inserción de tres códigos demostrativos`; no reemplaza los códigos personales |
 
-La salida completa de los 12 casos se muestra en el README. Para la evidencia
+La salida completa de los 13 casos se muestra en el README. Para la evidencia
 solicitada, ejecuta `PruebasBiblioteca` en tu terminal y toma una captura real
 de la salida en tu equipo.
 

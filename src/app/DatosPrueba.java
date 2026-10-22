@@ -39,6 +39,12 @@ public final class DatosPrueba {
         return catalogo;
     }
 
+    public static CatalogoABB crearCatalogoSW_E1ConCodigos(int... codigosAdicionales) {
+        CatalogoABB catalogo = crearCatalogoSW_E1();
+        insertarCodigos(catalogo, codigosAdicionales);
+        return catalogo;
+    }
+
     public static void insertarCodigos(CatalogoABB catalogo, int[] codigos) {
         insertarCodigos(catalogo, codigos, 0);
     }

@@ -31,7 +31,7 @@ java -cp out app.PruebasBiblioteca
 
 La ejecución verificada de las pruebas se conserva en
 [`docs/resultado-pruebas.txt`](docs/resultado-pruebas.txt); termina en
-`12/12 pruebas OK`:
+`13/13 pruebas OK`:
 
 ```text
 OK  biblioteca con solo la raíz
@@ -46,7 +46,8 @@ OK  operaciones sobre libro inexistente
 OK  validaciones de datos de libro
 OK  ABB inválido por nieto mal ubicado
 OK  reconstrucción directa desde preorden
-12/12 pruebas OK
+OK  inserción de tres códigos demostrativos
+13/13 pruebas OK
 ```
 GitHub Actions compila el proyecto y ejecuta la misma suite en cada push a
 `main`/`desarrollo` y en pull requests hacia `main`.
@@ -66,6 +67,9 @@ BIB Biblioteca FISEI
 La biblioteca tiene 7 unidades, 4 hojas, altura 2 (en aristas) y 13 libros.
 Los detalles de los recorridos, las trazas y las eliminaciones están en
 [`TRAZAS.md`](TRAZAS.md).
+Esa guía muestra además una ejecución reproducible con los códigos de ejemplo
+`11, 22, 33`; no son códigos personales derivados de una cédula. Sustitúyelos
+por tus resultados antes de presentar las trazas personales.
 
 El informe de la práctica se encuentra en
 [`Deber-Arboles-VillacresFernando.pdf`](Deber-Arboles-VillacresFernando.pdf).

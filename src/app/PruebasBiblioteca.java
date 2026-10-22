@@ -35,6 +35,8 @@ public final class PruebasBiblioteca {
         ejecutar("validaciones de datos de libro", PruebasBiblioteca::probarValidaciones);
         ejecutar("ABB inválido por nieto mal ubicado", PruebasBiblioteca::probarABBInvalido);
         ejecutar("reconstrucción directa desde preorden", PruebasBiblioteca::probarDesdePreorden);
+        ejecutar("inserción de tres códigos demostrativos",
+                PruebasBiblioteca::probarCodigosDemostrativos);
         System.out.println(exitosas + "/" + total + " pruebas OK");
         if (exitosas != total) {
             System.exit(1);
@@ -181,5 +183,14 @@ public final class PruebasBiblioteca {
         verificar(codigos(reconstruido, TipoRecorrido.PREORDEN)
                 .equals("60 35 20 45 40 80 70 75 90"), "Reconstrucción incorrecta.");
         verificar(reconstruido.esABBValido(), "El árbol reconstruido debe ser válido.");
+    }
+
+    private static void probarCodigosDemostrativos() {
+        CatalogoABB catalogo = DatosPrueba.crearCatalogoSW_E1ConCodigos(11, 22, 33);
+        verificar(catalogo.contar() == 12, "Se esperaban 12 libros.");
+        verificar(codigos(catalogo, TipoRecorrido.PREORDEN)
+                .equals("60 35 20 11 22 33 45 40 80 70 75 90"),
+                "Preorden demostrativo incorrecto.");
+        verificar(catalogo.esABBValido(), "El ABB demostrativo debe ser válido.");
     }
 }
