@@ -73,8 +73,7 @@ por tus resultados antes de presentar las trazas personales.
 
 El informe de la práctica se encuentra en
 [`Deber-Arboles-VillacresFernando.pdf`](Deber-Arboles-VillacresFernando.pdf).
-Incluye los resultados verificados y conclusiones; revisa las evidencias
-personales pendientes antes de entregarlo.
+Su resultado debe coincidir con la suite actual: `13/13 pruebas OK`.
 
 ## Organización
 
@@ -96,8 +95,9 @@ No se usan `TreeSet`, `TreeMap`, `PriorityQueue`, `NavigableSet`,
 
 - El repositorio público de este proyecto es
   [Deber-Arboles-VillacresFernando](https://github.com/fercho123909/Deber-Arboles-VillacresFernando).
-- El trabajo está publicado en la rama `desarrollo`. Para cumplir el flujo de
-  la asignatura, crea el pull request hacia `main` y confirma su integración.
+- El pull request [#1](https://github.com/fercho123909/Deber-Arboles-VillacresFernando/pull/1)
+  de `desarrollo` a `main` fue integrado. La rama `main` contiene la versión
+  entregable del proyecto.
 - Adjuntar en Moodle el PDF solicitado con enlace al repositorio, capturas
   propias de la ejecución, pruebas, historial de commits y pull request, y la reflexión.
 - Completar en [`TRAZAS.md`](TRAZAS.md) los códigos derivados de los últimos
@@ -105,7 +105,9 @@ No se usan `TreeSet`, `TreeMap`, `PriorityQueue`, `NavigableSet`,
 - Ejecutar el proyecto y explicar las decisiones de implementación antes de
   entregar: la práctica es individual.
 
-El archivo de resultados es la salida real redirigida desde la ejecución local.
-Toma también una captura desde tu terminal para la evidencia fotográfica
-solicitada; no reemplaces las capturas propias de historial o pull request con
-el archivo de resultados.
+El archivo [`docs/resultado-pruebas.txt`](docs/resultado-pruebas.txt) conserva
+la salida real de la suite local. Para Moodle, agrega además capturas propias
+de la ejecución y de las páginas del historial de commits y del pull request;
+el archivo de texto no las sustituye. Los códigos `11, 22, 33` de las trazas
+son demostrativos y deben reemplazarse por los valores personales calculados
+antes de entregar.
